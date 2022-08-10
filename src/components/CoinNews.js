@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { Container } from "react-bootstrap";
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import { Container } from 'react-bootstrap'
 
-import Row from "react-bootstrap/Row";
-import Card from "react-bootstrap/Card";
+import Row from 'react-bootstrap/Row'
+import Card from 'react-bootstrap/Card'
 
 const CoinNews = ({ symbol }) => {
   // ! state
-  const [news, setNews] = useState(null);
-  const [newsErr, setNewsErr] = useState(false);
+  const [news, setNews] = useState(null)
+  const [newsErr, setNewsErr] = useState(false)
 
   // https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=CRYPTO:xrp&time_from=20220410T0130&limit=55&apikey=7FVRLQDMZWW3RN11
 
@@ -19,21 +19,21 @@ const CoinNews = ({ symbol }) => {
         // console.log('News Id ->', symbol)
         const { data } = await axios.get(
           `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=CRYPTO:${symbol}&time_from=20220410T0130&limit=55&apikey=7FVRLQDMZWW3RN11`
-        );
-        setNews(data);
+        )
+        setNews(data)
       } catch (err) {
-        console.log(err);
-        setNewsErr(true);
+        console.log(err)
+        setNewsErr(true)
       }
-    };
-    getNews();
-  }, [symbol]);
+    }
+    getNews()
+  }, [symbol])
 
   // for (let i = 0; i < news.feed.length; i++) {
   //   console.log(news.feed[i])
   // }
 
-  console.log(news);
+  console.log(news)
 
   // ! JSX
   return (
@@ -43,10 +43,10 @@ const CoinNews = ({ symbol }) => {
       <Row>
         {news ? (
           news.feed.map((article, i) => {
-            const { title, source, summary } = article;
+            const { title, source, summary } = article
             return (
               <>
-                <Card key={i} style={{ width: "100%" }}>
+                <Card key={i} style={{ width: '100%', color: 'black' }}>
                   <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">
@@ -63,7 +63,7 @@ const CoinNews = ({ symbol }) => {
                     <div className="article-img"></div>
                   </div> */}
               </>
-            );
+            )
           })
         ) : (
           <>
@@ -76,7 +76,7 @@ const CoinNews = ({ symbol }) => {
         )}
       </Row>
     </Container>
-  );
-};
+  )
+}
 
-export default CoinNews;
+export default CoinNews

@@ -1,15 +1,15 @@
 // Import Link
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 // Import React Bootstrap Components
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container'
 
 const PageNavbar = () => {
   // ! JSX
   return (
-    <Navbar expand="sm">
+    <Navbar expand="sm" className="justify-content-center">
       <Container as="section">
         {/* Navbar brand */}
         {/* Wherever you use a href on a bootstrap component, replace it with an as={Link} and a to="/pathname" */}
@@ -27,7 +27,7 @@ const PageNavbar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
-};
+  )
+}
 
-export default PageNavbar;
+export default PageNavbar
