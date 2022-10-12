@@ -59,6 +59,7 @@ const CoinSingle = () => {
                   {bread.name} - {bread.symbol}
                 </h1>
                 <h1>Current Price -> ${bread.market_data.current_price.usd}</h1>
+                <h1>24H Change -></h1>
                 <h1
                   className={`col-1 text-end 
                         ${
@@ -74,9 +75,9 @@ const CoinSingle = () => {
               </div>
               <div>
                 <h1>Market Cap -> ${bread.market_data.market_cap.usd}</h1>
-                <h1>Circulating Supply -> </h1>
+                {/* <h1>Circulating Supply -> </h1> */}
               </div>
-              <div>
+              {/* <div>
                 <h1>7D % Change -></h1>
                 <h1>30D % Change -></h1>
                 <h1>1YR % Change -></h1>
@@ -92,7 +93,7 @@ const CoinSingle = () => {
                 <h2>Hashing Algo -></h2>
                 <h2>Website link -></h2>
                 <h2>Coin Description -></h2>
-              </div>
+              </div> */}
             </Row>
             <hr />
             <Row>
