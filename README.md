@@ -1,6 +1,6 @@
 # GA SEI Project 2 - Crypto Price & News Tracker
 
-**Project Link:** link-here
+**Project Link:** https://bit.ly/3CRaMCt
 
 ## Overview
 
