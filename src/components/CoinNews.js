@@ -61,7 +61,7 @@ const CoinNews = ({ symbol }) => {
         ) : (
           <>
             {newsErr ? (
-              <h2>Something went wrong. Please try again later</h2>
+              <h2>Something went wrong. Please try again later.</h2>
             ) : (
               <h2>okay</h2>
             )}
